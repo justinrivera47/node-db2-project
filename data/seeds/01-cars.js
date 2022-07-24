@@ -24,7 +24,7 @@ const cars = [
   },
 ]
 
-exports.seeds = function (knex) {
+exports.seed = function (knex) {
   return knex('cars')
   .truncate().then(()=>{
     return knex('cars').insert(cars)
