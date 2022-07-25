@@ -9,6 +9,7 @@ const checkCarId = async (req, res, next) => {
         message: 'not found'
       })
     } else {
+      req.cars = cars
       next()
     }
   } catch (err) {
